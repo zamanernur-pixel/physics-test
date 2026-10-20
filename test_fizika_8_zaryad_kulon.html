@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Тест по физике — Электрические заряды и закон Кулона</title>
+<style>
+:root{--bg:#f3f6fc;--card:#fff;--ink:#17233d;--muted:#63708a;--accent:#365ee8;--accent2:#e9eeff;--good:#16824b;--bad:#c53b48;--line:#dfe5f0}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(145deg,#eef3ff,#f8faff 45%,#edf7f6);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);line-height:1.5}
+main{width:min(900px,100%);margin:0 auto;padding:24px 16px 48px}.hero{background:#17264c;color:white;border-radius:24px;padding:28px;margin-bottom:18px;position:relative;overflow:hidden}.hero:after{content:"±";position:absolute;font-size:150px;right:22px;top:-35px;color:#ffffff12;font-weight:800}.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#b9c8ff;font-weight:700}.hero h1{font-size:clamp(1.55rem,4vw,2.35rem);line-height:1.15;margin:10px 0}.hero p{margin:8px 0 0;color:#dce4ff;max-width:680px}.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.pill{border:1px solid #ffffff40;background:#ffffff12;padding:6px 11px;border-radius:99px;font-size:.85rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin:16px 0;box-shadow:0 8px 24px #263a6810}.intro h2,.question h2{margin:0 0 10px}.muted{color:var(--muted)}.notice{background:#f5f7ff;border-left:4px solid var(--accent);padding:12px 14px;border-radius:8px;margin:14px 0}.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.btn{border:0;border-radius:12px;padding:12px 18px;font-weight:700;font-size:1rem;cursor:pointer;background:var(--accent);color:white;transition:.15s}.btn:hover{filter:brightness(.95);transform:translateY(-1px)}.btn.secondary{background:#edf1fb;color:#243458}.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}.progress-shell{height:8px;background:#e8edf7;border-radius:20px;overflow:hidden;margin:12px 0 20px}.progress{height:100%;background:linear-gradient(90deg,#365ee8,#39b7a4);width:0;transition:width .2s}.question-number{color:var(--accent);font-weight:800;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}.question h2{font-size:1.25rem;margin-top:8px}.qtext{font-size:1.08rem;margin:10px 0 18px}.options{display:grid;gap:10px}.option{display:flex;align-items:flex-start;gap:12px;text-align:left;width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:13px;background:white;color:var(--ink);cursor:pointer;font:inherit}.option:hover{border-color:#9aaef8;background:#fafbff}.option.selected{border-color:var(--accent);background:var(--accent2)}.letter{flex:0 0 28px;height:28px;border-radius:8px;background:#eef1f8;display:grid;place-items:center;font-weight:800;font-size:.85rem}.option.selected .letter{background:var(--accent);color:white}.bottomnav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:20px}.small{font-size:.9rem}.hidden{display:none!important}.resultscore{font-size:3rem;font-weight:850;letter-spacing:-.04em;color:var(--accent);line-height:1.1}.resultgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0}.stat{padding:14px;background:#f5f7fc;border-radius:13px}.stat strong{display:block;font-size:1.25rem}.reviewitem{border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}.reviewitem.correct{border-left:5px solid var(--good)}.reviewitem.incorrect{border-left:5px solid var(--bad)}.answerline{font-weight:700;margin:8px 0}.explanation{color:#43516b;background:#f7f9fc;padding:12px;border-radius:10px;margin-top:10px}.tag{display:inline-block;padding:4px 9px;border-radius:99px;font-size:.8rem;font-weight:750}.tag.good{background:#e3f6eb;color:#126a3b}.tag.bad{background:#ffeaec;color:#a62935}.footer{text-align:center;color:var(--muted);font-size:.85rem;padding:12px}
+@media(max-width:520px){main{padding:12px 10px 30px}.hero{padding:22px 18px;border-radius:18px}.card{padding:17px}.resultgrid{grid-template-columns:1fr}.btn{flex:1}.bottomnav .btn{min-width:42%}}
+@media print{body{background:white}.hero{background:#17264c!important;print-color-adjust:exact}.btnrow,.bottomnav{display:none!important}.card{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<main>
+<header class="hero">
+  <div class="eyebrow">Физика · 8 класс</div>
+  <h1>Электрические заряды<br>и закон Кулона</h1>
+  <p>Интерактивный тест: закон сохранения электрического заряда, взаимодействие неподвижных зарядов, элементарный заряд и закон Кулона.</p>
+  <div class="meta"><span class="pill">20 вопросов</span><span class="pill">Смешанная сложность</span><span class="pill">1 балл за вопрос</span></div>
+</header>
+
+<section id="start" class="card intro">
+  <h2>Перед началом</h2>
+  <p class="muted">Выберите один ответ в каждом задании. Можно возвращаться к предыдущим вопросам и менять ответы. Ключи и объяснения откроются после завершения.</p>
+  <div class="notice"><strong>Полезные данные</strong><br>
+  Закон Кулона: <b>F = k · |q₁q₂| / r²</b><br>
+  k = 9 · 10⁹ Н·м²/Кл²; элементарный заряд e = 1,6 · 10⁻¹⁹ Кл.<br>
+  В формулах заряд указывайте в кулонах (Кл), расстояние — в метрах (м).</div>
+  <p class="small muted">Рекомендуемое время: 20–25 минут. Таймер не используется — работайте в удобном темпе.</p>
+  <div class="btnrow"><button class="btn" id="startBtn">Начать тест</button></div>
+</section>
+
+<section id="quiz" class="card hidden" aria-live="polite">
+  <div class="topline"><span class="question-number" id="qnum">Вопрос 1 из 20</span><span class="muted small" id="answered">Отвечено: 0 из 20</span></div>
+  <div class="progress-shell"><div class="progress" id="progress"></div></div>
+  <div class="question">
+    <h2 id="qtitle"></h2><div class="qtext" id="qtext"></div>
+    <div class="options" id="options"></div>
+  </div>
+  <div class="bottomnav">
+    <button class="btn secondary" id="prevBtn">← Назад</button>
+    <button class="btn" id="nextBtn">Следующий →</button>
+    <button class="btn" id="finishBtn">Завершить тест</button>
+  </div>
+</section>
+
+<section id="results" class="card hidden" aria-live="polite">
+  <div class="eyebrow" style="color:#365ee8">Результат</div>
+  <h2>Тест завершён</h2>
+  <div class="resultscore" id="score">0/20</div>
+  <p id="resultMessage"></p>
+  <div class="resultgrid">
+    <div class="stat"><span class="muted small">Правильных ответов</span><strong id="correctStat">0</strong></div>
+    <div class="stat"><span class="muted small">Процент</span><strong id="percentStat">0%</strong></div>
+    <div class="stat"><span class="muted small">Оценка</span><strong id="gradeStat">—</strong></div>
+  </div>
+  <div class="btnrow"><button class="btn" id="reviewBtn">Посмотреть ответы и решения</button><button class="btn secondary" id="restartBtn">Пройти заново</button></div>
+</section>
+
+<section id="review" class="card hidden">
+  <h2>Ключ ответов и разбор</h2>
+  <p class="muted">Для каждого задания показаны ваш ответ, правильный вариант и краткое объяснение. Для расчётных задач приведён ход решения.</p>
+  <div id="reviewList"></div>
+  <div class="btnrow"><button class="btn secondary" id="printBtn">Печать / сохранить в PDF</button><button class="btn" id="backResultBtn">К результатам</button></div>
+</section>
+<div class="footer">Тренировочный материал для 8 класса · HTML-файл работает без подключения к интернету</div>
+</main>
+<script>
+const questions = [
+{q:"Как формулируется закон сохранения электрического заряда для электрически изолированной системы?",o:["Алгебраическая сумма зарядов остаётся постоянной","Все заряды со временем становятся положительными","Сумма модулей зарядов всегда равна нулю","Заряд каждого тела обязательно сохраняется отдельно"],a:0,e:"В изолированной системе заряды могут перераспределяться, но их алгебраическая сумма остаётся постоянной."},
+{q:"Как взаимодействуют два неподвижных точечных заряда одного знака?",o:["Притягиваются","Отталкиваются","Не взаимодействуют","Сначала притягиваются, затем отталкиваются"],a:1,e:"Одноимённые электрические заряды отталкиваются."},
+{q:"Как взаимодействуют два неподвижных точечных заряда противоположных знаков?",o:["Отталкиваются","Не взаимодействуют","Притягиваются","Их взаимодействие зависит только от массы"],a:2,e:"Разноимённые электрические заряды притягиваются."},
+{q:"Какой заряд называют элементарным по модулю?",o:["1 Кл","1,6 · 10⁻¹⁹ Кл","9 · 10⁹ Кл","6,25 · 10¹⁸ Кл"],a:1,e:"Модуль элементарного заряда e ≈ 1,6 · 10⁻¹⁹ Кл. Заряд протона равен +e, электрона — −e."},
+{q:"Каков знак электрического заряда электрона?",o:["Положительный","Отрицательный","Нулевой","Знак зависит от скорости электрона"],a:1,e:"Электрон имеет отрицательный заряд −e."},
+{q:"Как изменится сила взаимодействия двух точечных зарядов, если расстояние между ними увеличить в 2 раза, не меняя заряды?",o:["Увеличится в 2 раза","Уменьшится в 2 раза","Уменьшится в 4 раза","Увеличится в 4 раза"],a:2,e:"По закону Кулона F обратно пропорциональна квадрату расстояния: F′ = F/2² = F/4."},
+{q:"Как изменится сила Кулона, если модуль одного из зарядов увеличить в 3 раза, а расстояние оставить прежним?",o:["Увеличится в 3 раза","Уменьшится в 3 раза","Увеличится в 9 раз","Не изменится"],a:0,e:"Сила прямо пропорциональна модулю каждого заряда. Увеличение одного заряда в 3 раза увеличивает силу в 3 раза."},
+{q:"Какое выражение соответствует закону Кулона для модулей сил двух точечных зарядов в вакууме?",o:["F = k|q₁q₂|/r²","F = kr²/|q₁q₂|","F = k(|q₁|+|q₂|)/r","F = |q₁q₂|/(kr)"],a:0,e:"Закон Кулона: F = k|q₁q₂|/r², где r — расстояние между зарядами."},
+{q:"Тело получило дополнительные электроны. Как изменился его заряд?",o:["Стал положительным","Стал отрицательным","Остался нулевым при любом числе электронов","Обязательно стал равен +1 Кл"],a:1,e:"Электроны имеют отрицательный заряд, поэтому избыток электронов делает тело отрицательно заряженным."},
+{q:"Тело потеряло часть электронов, а протоны остались в нём. Какой заряд приобрело тело?",o:["Отрицательный","Положительный","Нулевой обязательно","Заряд исчез полностью"],a:1,e:"При потере электронов положительный заряд протонов становится нескомпенсированным."},
+{q:"Два заряда +2 мкКл и +3 мкКл находятся на расстоянии 0,30 м в вакууме. Чему равен модуль силы взаимодействия? Используйте k = 9 · 10⁹ Н·м²/Кл².",o:["0,06 Н","0,6 Н","6 Н","60 Н"],a:1,e:"Дано: q₁=2·10⁻⁶ Кл, q₂=3·10⁻⁶ Кл, r=0,30 м. F=k|q₁q₂|/r² = 9·10⁹·6·10⁻¹²/0,09 = 0,6 Н. Заряды одноимённые, поэтому отталкиваются."},
+{q:"Заряды +1 мкКл и −1 мкКл расположены на расстоянии 0,10 м в вакууме. Каков модуль силы взаимодействия?",o:["0,009 Н","0,09 Н","0,9 Н","9 Н"],a:2,e:"F=9·10⁹·(1·10⁻⁶·1·10⁻⁶)/(0,10)² = 9·10⁻³/0,01 = 0,9 Н. Заряды разноимённые, значит, притягиваются."},
+{q:"На двух одинаковых металлических шариках находятся заряды +6 нКл и −2 нКл. Шарики соприкоснули, затем разъединили. Каковы заряды шариков после разделения?",o:["+2 нКл и +2 нКл","+4 нКл и 0 нКл","+6 нКл и −2 нКл","−2 нКл и −2 нКл"],a:0,e:"Суммарный заряд +6 нКл − 2 нКл = +4 нКл. Для одинаковых проводящих шариков после соприкосновения заряд делится поровну: +2 нКл на каждом."},
+{q:"Тело имеет заряд −4,8 · 10⁻¹⁹ Кл. Сколько лишних электронов соответствует этому заряду?",o:["2","3","4","6"],a:1,e:"N=|q|/e = (4,8·10⁻¹⁹)/(1,6·10⁻¹⁹)=3. Отрицательный знак означает избыток трёх электронов."},
+{q:"Сколько элементарных зарядов по модулю содержится в заряде +3,2 · 10⁻¹⁹ Кл?",o:["1","2","3","4"],a:1,e:"N=q/e=(3,2·10⁻¹⁹)/(1,6·10⁻¹⁹)=2. Положительный заряд соответствует недостатку двух электронов относительно нейтрального состояния."},
+{q:"Если оба заряда увеличить в 2 раза, а расстояние между ними увеличить в 2 раза, как изменится сила Кулона?",o:["Увеличится в 4 раза","Уменьшится в 2 раза","Не изменится","Увеличится в 2 раза"],a:2,e:"Числитель |q₁q₂| возрастает в 4 раза, знаменатель r² — также в 4 раза. Сила не изменяется."},
+{q:"Какое утверждение об электрическом заряде верно?",o:["Заряд измеряется в ньютонах","Заряд может принимать любое значение независимо от элементарного заряда","В обычных электрических явлениях заряд тела кратен элементарному заряду","Электрон и протон имеют одинаковые знаки зарядов"],a:2,e:"Электрический заряд квантован: заряд тела обычно выражается как q = ne, где n — целое число, e — элементарный заряд. Единица заряда — кулон."},
+{q:"Два одинаковых по модулю заряда находятся на расстоянии r и отталкиваются с силой F. На каком расстоянии сила будет F/9?",o:["3r","r/3","9r","r/9"],a:0,e:"F ∝ 1/r². Чтобы сила уменьшилась в 9 раз, расстояние нужно увеличить в √9 = 3 раза."},
+{q:"Суммарный заряд изолированной системы до взаимодействия равен −5 нКл. Каким будет суммарный заряд после взаимодействия тел внутри системы?",o:["+5 нКл","0 нКл","−5 нКл","Нельзя определить без масс тел"],a:2,e:"В изолированной системе алгебраическая сумма зарядов сохраняется, поэтому она останется равной −5 нКл."},
+{q:"Два точечных заряда 4 нКл и 2 нКл находятся на расстоянии 0,20 м в вакууме. Найдите модуль силы взаимодействия.",o:["1,8 · 10⁻⁶ Н","1,8 · 10⁻⁵ Н","1,8 · 10⁻⁴ Н","3,6 · 10⁻⁴ Н"],a:0,e:"Дано: q₁=4·10⁻⁹ Кл, q₂=2·10⁻⁹ Кл, r=0,20 м. F=9·10⁹·8·10⁻¹⁸/0,04 = 1,8·10⁻⁶ Н."}
+];
+let current=0, answers=Array(questions.length).fill(null), finished=false;
+const $=id=>document.getElementById(id);
+function show(id){$(id).classList.remove('hidden')}
+function hide(id){$(id).classList.add('hidden')}
+function countAnswered(){return answers.filter(x=>x!==null).length}
+function renderQuestion(){
+ const q=questions[current];
+ $('qnum').textContent=`Вопрос ${current+1} из ${questions.length}`;
+ $('answered').textContent=`Отвечено: ${countAnswered()} из ${questions.length}`;
+ $('progress').style.width=`${((current+1)/questions.length)*100}%`;
+ $('qtitle').textContent=`Задание ${current+1}`;
+ $('qtext').textContent=q.q;
+ const container=$('options');container.innerHTML='';
+ q.o.forEach((opt,i)=>{
+  const b=document.createElement('button');b.type='button';b.className='option'+(answers[current]===i?' selected':'');
+  b.setAttribute('aria-pressed',answers[current]===i?'true':'false');
+  const letter=document.createElement('span');letter.className='letter';letter.textContent='ABCD'[i];
+  const text=document.createElement('span');text.textContent=opt;
+  b.append(letter,text);b.addEventListener('click',()=>{answers[current]=i;renderQuestion()});container.appendChild(b);
+ });
+ $('prevBtn').disabled=current===0;
+ $('nextBtn').classList.toggle('hidden',current===questions.length-1);
+ $('finishBtn').classList.toggle('hidden',current!==questions.length-1);
+}
+function start(){current=0;answers=Array(questions.length).fill(null);finished=false;hide('start');hide('results');hide('review');show('quiz');renderQuestion();window.scrollTo({top:0,behavior:'smooth'})}
+function finish(){
+ const unanswered=answers.filter(x=>x===null).length;
+ if(unanswered && !confirm(`Осталось без ответа: ${unanswered}. Завершить тест?`))return;
+ finished=true;hide('quiz');show('results');hide('review');
+ const correct=questions.reduce((n,q,i)=>n+(answers[i]===q.a?1:0),0),pct=Math.round(correct/questions.length*100);
+ $('score').textContent=`${correct} / ${questions.length}`;
+ $('correctStat').textContent=`${correct} из ${questions.length}`;
+ $('percentStat').textContent=pct+'%';
+ let grade,msg;
+ if(pct>=90){grade='5';msg='Отличный результат! Вы уверенно ориентируетесь в теме.'}
+ else if(pct>=75){grade='4';msg='Хороший результат. Повторите задания, в которых допущены ошибки.'}
+ else if(pct>=50){grade='3';msg='Основы усвоены частично. Разберите ошибки и повторите формулы.'}
+ else{grade='2';msg='Рекомендуется повторить теорию и ещё раз решить задачи.'}
+ $('gradeStat').textContent=grade;$('resultMessage').textContent=msg;
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+function buildReview(){
+ const list=$('reviewList');list.innerHTML='';
+ questions.forEach((q,i)=>{
+  const ok=answers[i]===q.a, item=document.createElement('article');item.className='reviewitem '+(ok?'correct':'incorrect');
+  const h=document.createElement('h3');h.textContent=`${i+1}. ${q.q}`;item.appendChild(h);
+  const tag=document.createElement('span');tag.className='tag '+(ok?'good':'bad');tag.textContent=ok?'Верно':'Неверно';item.appendChild(tag);
+  const yours=document.createElement('div');yours.className='answerline';yours.textContent='Ваш ответ: '+(answers[i]===null?'нет ответа':`${'ABCD'[answers[i]]}. ${q.o[answers[i]]}`);item.appendChild(yours);
+  const right=document.createElement('div');right.className='answerline';right.textContent=`Правильный ответ: ${'ABCD'[q.a]}. ${q.o[q.a]}`;item.appendChild(right);
+  const ex=document.createElement('div');ex.className='explanation';ex.textContent=q.e;item.appendChild(ex);list.appendChild(item);
+ });
+}
+$('startBtn').addEventListener('click',start);
+$('prevBtn').addEventListener('click',()=>{if(current>0){current--;renderQuestion();window.scrollTo({top:0,behavior:'smooth'})}});
+$('nextBtn').addEventListener('click',()=>{if(current<questions.length-1){current++;renderQuestion();window.scrollTo({top:0,behavior:'smooth'})}});
+$('finishBtn').addEventListener('click',finish);
+$('reviewBtn').addEventListener('click',()=>{buildReview();hide('results');show('review');window.scrollTo({top:0,behavior:'smooth'})});
+$('restartBtn').addEventListener('click',start);
+$('backResultBtn').addEventListener('click',()=>{hide('review');show('results');window.scrollTo({top:0,behavior:'smooth'})});
+$('printBtn').addEventListener('click',()=>window.print());
+</script>
+</body>
+</html>
